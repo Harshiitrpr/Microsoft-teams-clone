@@ -1,0 +1,103 @@
+.chat-room {
+    font-family: sans-serif;
+    max-width: 600px;
+    margin: 100px auto;
+    background-color:white;
+    @media screen and (max-width: 600px) {
+        width: 100%;
+    }
+    .chat-room-header {
+        border-bottom: 1px solid gray;
+        box-shadow: 0px 0px 2px 0px grey;
+        max-width: 600px;
+        padding-left: 30px;
+        display: flow-root;
+        .room-id{
+            float: left;
+            padding-top: 3px;
+        }
+        .home-button{
+            float:right;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+    }
+    .chat-room-main {
+        padding-left: 6px;
+        padding-right: 6px;
+        overflow-y: scroll;
+        overflow: -moz-scrollbars-none;
+        -ms-overflow-style: none; 
+        height: 560px;
+        padding-bottom: 20px;
+        border-left: 1px solid gray;
+        border-right: 1px solid gray;
+        .message-container {
+            display: flow-root;
+            margin: 10px 10px 0 0;
+            .message-wrapper {
+                box-shadow: 0 1px 6px -2px black;
+                // border: 1px solid;
+                float: left;
+                min-width: 150px;
+                max-width: 250px;
+                border-radius: 4px;
+                font-size: 14px;
+                &.message-wrapper-right {
+                    float: right;
+                    background-color:#adffaf;
+                }
+                &.message-wrapper-left {
+                    float: left;
+                    background-color:#c7ecfc
+                }
+                .message-title-wrapper {
+                    // background-color: #f3f3f3;
+                    border-radius: 4px 4px 0 0;
+                    padding: 4px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .message-name {
+                        margin: 0;
+                    }
+                    .message-timestamp {
+                        font-size: 10px;
+                    }
+                }
+                .actual-message {
+                    margin: 4px;
+                    line-break: anywhere;
+                }
+            }
+        }
+    }
+
+    .chat-room-main::-webkit-scrollbar{
+        width: 0 !important;
+    }
+
+    .chat-room-form {
+        border-top: 1px solid gray;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid gray;
+        box-shadow: 0px 0px 4px 0px grey;
+        background-color: white;
+        bottom: 15px;
+        position: fixed;
+        right: 0;
+        left: 0;
+        width: 600px;
+        margin: 0 auto;
+    }
+}
+
+.whole-screen{
+    width: 100%;
+    height: 200vh;
+    background-color:#e0e0e0;
+    overflow: hidden;
+    position: fixed;
+}
